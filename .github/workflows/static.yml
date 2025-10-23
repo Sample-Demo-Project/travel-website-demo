@@ -42,3 +42,7 @@ jobs:
           external_repository: Sample-Demo-Project/travel-website-demo-dev
           publish_branch: gh-pages
           publish_dir: '.'
+
+      - name: Print staging URL
+        if: github.ref == 'refs/heads/dev'
+        run: echo "Staging site: https://sample-demo-project.github.io/travel-website-demo-dev/"
